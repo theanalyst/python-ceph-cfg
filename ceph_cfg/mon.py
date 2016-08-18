@@ -216,8 +216,8 @@ class mon_implementation_base(object):
         u.load_confg(self.model.cluster_name)
         u.mon_members_refresh()
         q = mdl_query.mdl_query(self.model)
-        if not q.mon_is():
-            raise Error("Not a mon node")
+        # if not q.mon_is():
+        #     raise Error("Not a mon node")
 
         path_done_file = "/var/lib/ceph/mon/%s-%s/done" % (
                 self.model.cluster_name,
